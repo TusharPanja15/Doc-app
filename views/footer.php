@@ -69,62 +69,8 @@
         <div class="col">
 
           <form>
-            <div class="mb-3">
-              <label for="email" class="form-label">Email address</label>
-              <input type="email" class="form-control" id="email" aria-describedby="emailHelp" disabled>
-              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-            </div>
-
-            <div class="mb-3">
-              <label for="username" class="form-label">Full Name</label>
-              <input type="text" class="form-control" id="username">
-            </div>
-
-            <div class="mb-3">
-              <label for="phone" class="form-label">Phone</label>
-              <input type="text" class="form-control" id="phone">
-            </div>
-
-            <div class="col-12 mb-3">
-              <label for="inputAddress" class="form-label">Address</label>
-              <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-            </div>
-            <div class="col-12 mb-3">
-              <label for="inputAddress2" class="form-label">Address 2</label>
-              <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-            </div>
-
-            <div class="row mb-3">
-              <div class="col-md-6">
-                <label for="inputCity" class="form-label">City</label>
-                <input type="text" class="form-control" id="inputCity">
-              </div>
-              <div class="col-md-6">
-                <label for="inputState" class="form-label">State</label>
-                <input type="text" class="form-control" id="inputState">
-              </div>
-            </div>
-
-            <div class="col-md-6 mb-3">
-              <label for="inputZip" class="form-label">Zip</label>
-              <input type="text" class="form-control" id="inputZip">
-            </div>
-
-            <div class="row mb-3">
-              <div class="col-md-6">
-                <label for="gender" class="form-label">Gender</label>
-                <select id="gender" class="form-select">
-                  <option selected>Choose...</option>
-                  <option>Male</option>
-                  <option>Female</option>
-                  <option>Other</option>
-                </select>
-              </div>
-              <div class="col-md-6">
-                <label for="birth" class="form-label">Birthday</label>
-                <input type="text" class="form-control" id="birth">
-              </div>
-            </div>
+            
+            <?php userProfileEditForm(); ?>
 
             <button type="submit" id="saveDetails" class="btn btn-primary">Save changes</button>
           </form>

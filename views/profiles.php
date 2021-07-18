@@ -4,10 +4,7 @@
             <img id="profilePic" src="public/img/icons/profilePic.svg" alt="">
         </div>
         <div class="col-8">
-            <h1>Jeremy Rose</h1>
-            <small>
-                <p><img id="locIcon" src="public/img/icons/location2.svg" alt="">New York ,NY</p>
-            </small>
+            <?php userName(); ?>
         </div>
     </div>
 
