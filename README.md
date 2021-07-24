@@ -77,7 +77,8 @@ To get the latest version, download the souce code from following link
 
 # WARNING
 
-This app is for educational purpose. Use it wisely.
+This app is for educational purpose. Because of security reasons we have disable the Google Maps API Key from the server. Use it wisely.
+
 
 
 
