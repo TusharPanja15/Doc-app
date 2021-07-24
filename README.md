@@ -81,9 +81,10 @@ This app is for educational purpose. Use it wisely.
 
 **************************************
 
-Created by: Sachin
-            Tushar Kumar
-            Tushar Panja
+Created by: 
+- Sachin
+- Tushar Kumar
+- Tushar Panja
 
 
 **************************************
