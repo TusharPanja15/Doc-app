@@ -45,7 +45,7 @@ For demo purposes, you could use the folloing credentials for login
 # Screenshots
 
 # Homepage
-![a](../main/docs/img/screenshots/task.png)
+![a](public/img/screenshots/homepage.png)
 
 
 # Login menu
