@@ -69,7 +69,7 @@ For demo purposes, you could use the folloing credentials for login
 
 This app would be updated very soon as it may contains some bugs and errors.
 
-To get the latest version, download the souce code from below link 
+To get the latest version, download the souce code from following link
 **" https://github.com/TusharPanja15/Doc-app "** 
 
 
