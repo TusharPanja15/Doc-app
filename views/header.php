@@ -26,182 +26,8 @@
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <title></title>
 
-  <script>
-    let map, infoWindow;
+  <script src="public/js/maps.js"></script>
 
-    function initMap() {
-      // Styles a map in night mode.
-      map = new google.maps.Map(document.getElementById("map"), {
-        center: {
-          lat: 40.674,
-          lng: -73.945
-        },
-        zoom: 12,
-        styles: [{
-            elementType: "geometry",
-            stylers: [{
-              color: "#242f3e"
-            }]
-          },
-          {
-            elementType: "labels.text.stroke",
-            stylers: [{
-              color: "#242f3e"
-            }]
-          },
-          {
-            elementType: "labels.text.fill",
-            stylers: [{
-              color: "#746855"
-            }]
-          },
-          {
-            featureType: "administrative.locality",
-            elementType: "labels.text.fill",
-            stylers: [{
-              color: "#d59563"
-            }],
-          },
-          {
-            featureType: "poi",
-            elementType: "labels.text.fill",
-            stylers: [{
-              color: "#d59563"
-            }],
-          },
-          {
-            featureType: "poi.park",
-            elementType: "geometry",
-            stylers: [{
-              color: "#263c3f"
-            }],
-          },
-          {
-            featureType: "poi.park",
-            elementType: "labels.text.fill",
-            stylers: [{
-              color: "#6b9a76"
-            }],
-          },
-          {
-            featureType: "road",
-            elementType: "geometry",
-            stylers: [{
-              color: "#38414e"
-            }],
-          },
-          {
-            featureType: "road",
-            elementType: "geometry.stroke",
-            stylers: [{
-              color: "#212a37"
-            }],
-          },
-          {
-            featureType: "road",
-            elementType: "labels.text.fill",
-            stylers: [{
-              color: "#9ca5b3"
-            }],
-          },
-          {
-            featureType: "road.highway",
-            elementType: "geometry",
-            stylers: [{
-              color: "#746855"
-            }],
-          },
-          {
-            featureType: "road.highway",
-            elementType: "geometry.stroke",
-            stylers: [{
-              color: "#1f2835"
-            }],
-          },
-          {
-            featureType: "road.highway",
-            elementType: "labels.text.fill",
-            stylers: [{
-              color: "#f3d19c"
-            }],
-          },
-          {
-            featureType: "transit",
-            elementType: "geometry",
-            stylers: [{
-              color: "#2f3948"
-            }],
-          },
-          {
-            featureType: "transit.station",
-            elementType: "labels.text.fill",
-            stylers: [{
-              color: "#d59563"
-            }],
-          },
-          {
-            featureType: "water",
-            elementType: "geometry",
-            stylers: [{
-              color: "#17263c"
-            }],
-          },
-          {
-            featureType: "water",
-            elementType: "labels.text.fill",
-            stylers: [{
-              color: "#515c6d"
-            }],
-          },
-          {
-            featureType: "water",
-            elementType: "labels.text.stroke",
-            stylers: [{
-              color: "#17263c"
-            }],
-          },
-        ],
-      });
-      infoWindow = new google.maps.InfoWindow();
-      const locationButton = document.createElement("button");
-      locationButton.textContent = "Pan to Current Location";
-      locationButton.classList.add("custom-map-control-button");
-      map.controls[google.maps.ControlPosition.TOP_CENTER].push(locationButton);
-      locationButton.addEventListener("click", () => {
-        // Try HTML5 geolocation.
-        if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(
-            (position) => {
-              const pos = {
-                lat: position.coords.latitude,
-                lng: position.coords.longitude,
-              };
-              infoWindow.setPosition(pos);
-              infoWindow.setContent("Location found.");
-              infoWindow.open(map);
-              map.setCenter(pos);
-            },
-            () => {
-              handleLocationError(true, infoWindow, map.getCenter());
-            }
-          );
-        } else {
-          // Browser doesn't support Geolocation
-          handleLocationError(false, infoWindow, map.getCenter());
-        }
-      });
-    }
-
-    function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-      infoWindow.setPosition(pos);
-      infoWindow.setContent(
-        browserHasGeolocation ?
-        "Error: The Geolocation service failed." :
-        "Error: Your browser doesn't support geolocation."
-      );
-      infoWindow.open(map);
-    }
-  </script>
 </head>
 
 <body>
@@ -216,7 +42,15 @@
         </a>
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="index.php" class="nav-link px-2 text-secondary">Home</a></li>
+          <?php 
+              $query = "SELECT * FROM users_data WHERE user_id = ". $_SESSION['id'] ." LIMIT 1";
+              $result = mysqli_query($link, $query);
+              $row = mysqli_fetch_assoc($result);
+                  if ($row['is_doctor'] == true) { ?>
+                    <li><a href="?view=dashboard" class="nav-link px-2 text-secondary">Dashboard</a></li>
+                  <?php } else { ?>
+                    <li><a href="index.php" class="nav-link px-2 text-secondary">Home</a></li>
+                  <?php } ?>
           <li><a href="?view=about" class="nav-link px-2 text-secondary">About Us</a></li>
           <li><a href="?view=contacts" class="nav-link px-2 text-secondary">Contact Us</a></li>
         </ul>
@@ -240,4 +74,4 @@
     </div>
   </header>
 
-  <div class="alert alert-success" id="alertInfo" role="alert">Successfully login!</div>
+  <div class="alert alert-danger" id="alertInfo">User Login is required!</div>

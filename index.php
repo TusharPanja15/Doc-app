@@ -25,6 +25,11 @@ if ($_GET['view'] == "findDoctorsNearMe") {
     $title = "My Profile - ". $_SESSION['id'] ." | Doc App";
     include('views/profiles.php'); 
 
+} else if ($_GET['view'] == "dashboard") { 
+
+    $title = "My Dashboard - ". $_SESSION['id'] ." | Doc App";
+    include('views/dashboard.php'); 
+
 } else {
 
     $title = "Doc App | Search, Consult with doctors and more.";

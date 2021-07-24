@@ -31,7 +31,7 @@
   font-size: 100px;
   font-weight: 700;
   color: #6e6e6e;
-  margin-bottom: -30px;
+  margin-bottom: -45px;
 }
 
 .footer-top > #p2 {
@@ -53,7 +53,6 @@
 }
 
 .footer p {
-  margin-top: 25px;
   font-size: 22px;
   color: #fff;
 }
@@ -271,7 +270,7 @@ header {
 
 }
 
-.editTab img,
+.editIcon,
 .offcanvas img {
   width: 20%;
   height: 10%;
@@ -300,4 +299,83 @@ header {
 
 #toogle {
   margin-top: 50px;
+}
+
+
+.table {
+  width: 80%;
+  margin: 0 auto !important;
+}
+
+.profileInfo {
+  position: relative;
+  left: 80px;
+  margin-bottom: 20px;
+}
+
+
+.profileInfo img {
+  width: 50%;
+}
+
+
+#imgBanner {
+  position: relative;
+  top: -49px;
+  left: -300px;
+  width: 200%;
+  height: 96%;
+  margin-right: -190px;
+}
+
+
+
+
+table {
+  width: 100%;
+  margin-bottom: 50px;
+  border: solid #f2f2f2 10px;
+  background-color: #f2f2f2;
+  border-collapse: separate;
+  border-spacing: 15px;
+  border-radius: 30px;
+  -moz-border-radius: 6px;
+}
+
+table th {
+  font-family: 'Ubuntu-Bold', sans-serif;
+  font-size: 25px;
+  color: rgb(80, 80, 80);
+  background-color: #f2f2f2;
+
+  width: 50%;
+}
+
+table #icons {
+  width: 50px;
+  height: 100%;
+  margin: -220px 20px -220px 0px;
+  
+}
+
+table tr {
+  font-family: 'Ubuntu', sans-serif;
+  color: rgb(71, 71, 71);
+  background-color: white;
+}
+
+table .feature {
+  font-family: 'Ubuntu-Bold', sans-serif;
+  color: orangered;
+}
+
+
+table td:first-child {
+  -moz-border-radius: 10px 0 0 10px;
+  -webkit-border-radius: 16px 0 0 16px;
+}
+
+table td:last-child {
+  -moz-border-radius: 0 10px 10px 0;
+  -webkit-border-radius: 0 16px 16px 0;
 }
