@@ -213,7 +213,7 @@
         "&loginActive=" + $("#loginActive").val(),
       success: function(result) {
         if ($("#checkDoctor").val() == true) {
-          window.location.assign("index.php?view=dashboard")
+          window.location.assign("index.php?view=myProfile")
         } else {
 
           if (result == "1") {
