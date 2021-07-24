@@ -49,19 +49,21 @@ For demo purposes, you could use the folloing credentials for login
 
 
 # Login menu
-![a](../main/docs/img/screenshots/task.png)
+![a](public/img/screenshots/login.png)
 
 
 # Public profile
-![a](../main/docs/img/screenshots/task.png)
+![a](public/img/screenshots/profile.png)
+
+![a](public/img/screenshots/profile-maps.png)
 
 
 # Edit your public profile
-![a](../main/docs/img/screenshots/task.png)
+![a](public/img/screenshots/edit-profile.png)
 
 
 # Find doctors near you
-![a](../main/docs/img/screenshots/task.png)
+![a](public/img/screenshots/find-doctors.png)
 
 
 
